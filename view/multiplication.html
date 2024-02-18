@@ -1,0 +1,11 @@
+<h1> 九九乘法表 </h1>
+
+<table border= 1>
+    {{range $i,$row:= .Res1}}                 {{- /*二維切片的用法，i為索引值，row為Res1[i]，若要用索引和值要加$號*/ -}}
+    <tr>
+        {{range $j,$value := $row}}           
+        <td style="padding: 10px;">{{$value}}</td>
+        {{end}}
+    </tr>
+    {{end}}
+ </table>
